@@ -56,7 +56,7 @@ const YouCon = () => {
   };
 
   return (
-    <div className="flex flex-col items-center w-full h-full min-h-screen py-20 text-white bg-black">
+    <div className="flex flex-col items-center justify-center w-full h-full min-h-screen text-white bg-black">
 
       <h1 className="px-8 pb-8 mb-4 text-5xl font-bold text-center uppercase">
         <span className='text-[#ff0000] hover:text-[#ff0000b9]'>YouTube</span> Video Downloader
