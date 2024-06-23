@@ -14,7 +14,7 @@ const Converter = () => {
         params: {
           part: 'snippet,contentDetails',
           id: videoId,
-          key: 'YOUR_API_KEY',
+          key: 'AIzaSyCFf8gKt1ryhAfuOtxrVLEmxPFcSiy6ZYU',
         },
       });
 
@@ -40,19 +40,14 @@ const Converter = () => {
     }
   };
 
-  const handleDownload = async () => {
+  const handleDownload = () => {
     if (!videoDetails) return;
 
     const videoId = new URL(videoLink).searchParams.get('v');
     const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
     const downloadUrl = `http://localhost:5000/download?url=${encodeURIComponent(videoUrl)}&format=${quality}`;
 
-    const link = document.createElement('a');
-    link.href = downloadUrl;
-    link.setAttribute('download', `${videoDetails.videoTitle}.${quality === 'mp3' ? 'mp3' : 'mp4'}`);
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.open(downloadUrl, '_blank');
   };
 
   const toggleDescription = () => {
@@ -62,7 +57,7 @@ const Converter = () => {
   return (
     <div className="flex flex-col items-center w-full h-full min-h-screen py-20 text-white bg-black">
       <h1 className="px-8 pb-8 mb-4 text-5xl font-bold text-center uppercase">
-        <span className='text-[#23d443] hover:text-[#30ff5d]'>YouTube</span> Video Downloader
+        <span className='text-[#ff0000] hover:text-[#ff0000b9]'>YouTube</span> Video Downloader
       </h1>
       <div className="flex justify-center w-full px-8 py-8 mb-4">
         <div className="w-[800px]">
@@ -89,8 +84,8 @@ const Converter = () => {
             <div className="text-2xl text-center md:text-left">
               <p className='text-3xl mb-4 text-[#23d443] hover:text-[#30ff5d]'><strong>Video Title:</strong> {videoDetails.videoTitle}</p>
               <p>
-                <strong>Description:</strong> {isDescriptionExpanded ? videoDetails.description : `${videoDetails.description.substring(0, 100)}...`}
-                <button onClick={toggleDescription} className="ml-2 text-blue-500">
+                <strong className='mb-2 '>Description:</strong> {isDescriptionExpanded ? videoDetails.description : `${videoDetails.description.substring(0, 100)}...`}
+                <button onClick={toggleDescription} className="mb-8 ml-2 font-semibold text-blue-500">
                   {isDescriptionExpanded ? 'Show Less' : 'Show More'}
                 </button>
               </p>
@@ -100,7 +95,7 @@ const Converter = () => {
           </div>
 
           <div className="w-full py-8 mt-4">
-            <label htmlFor="quality" className="block mb-2 text-lg">Select Quality:</label>
+            <label htmlFor="quality" className="block mb-2 text-lg">Select Type:</label>
             <select
               id="quality"
               value={quality}

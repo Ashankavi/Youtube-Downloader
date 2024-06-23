@@ -17,7 +17,7 @@ app.get('/download', async (req, res) => {
   res.header('Content-Disposition', `attachment; filename="${videoTitle}.${format === 'mp3' ? 'mp3' : 'mp4'}`);
 
   ytdl(url, {
-    format: format === 'mp3' ? 'audioonly' : 'mp4',
+    filter: format === 'mp3' ? 'audioonly' : 'videoandaudio',
     quality: format === 'mp4_720' ? 'highestvideo' : 'lowestvideo',
   }).pipe(res);
 });
