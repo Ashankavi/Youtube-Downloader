@@ -67,7 +67,7 @@ const Converter = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full min-h-screen text-white bg-black">
+    <div className="flex flex-col items-center justify-center w-full h-full min-h-screen py-20 text-white bg-black">
       <h1 className="px-8 pb-8 mb-4 text-5xl font-bold text-center uppercase"> <span className='text-[#23d443] hover:text-[#30ff5d]'>Spotify</span> Song Downloader</h1>
       <div className="flex justify-center w-full px-8 py-8 mb-4">
         <div className="w-[800px]">
@@ -80,7 +80,7 @@ const Converter = () => {
           />
           <button
             onClick={fetchSongDetails}
-            className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%  font-bold uppercase text-white p-2 mt-2 w-full rounded-[10px]"
+            className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%  font-bold uppercase text-white p-2 mt-4 w-full rounded-[10px]"
           >
             Search
           </button>
@@ -130,7 +130,7 @@ const Converter = () => {
           <div className="flex justify-center w-full">
             <button
               onClick={handleDownload}
-              className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%  font-bold uppercase text-white p-2 mt-2 w-full rounded-[10px]"
+              className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%  font-bold uppercase text-white p-2 mt-2 w-full  rounded-[10px]"
             >
               Download
             </button>

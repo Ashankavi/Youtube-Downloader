@@ -3,7 +3,7 @@ import { FaTwitter, FaFacebook, FaLinkedin, FaInstagram, FaGithub, FaBehance, Fa
 
 const Footer = () => {
   return (
-    <footer className="relative p-6 bg-black text-white ">
+    <footer className="relative p-6 text-white bg-black ">
       <div className="container mx-auto text-center">
         <div className="flex flex-row justify-center gap-2 text-xl text-white ">
             
@@ -29,7 +29,7 @@ const Footer = () => {
             <FaDribbble />
           </a>
         </div>
-        <p className="mb-3 mt-5 text-sm text-white">
+        <p className="mt-5 mb-3 text-sm text-white">
         © 2024 <span><a href="https://ashankavi-portfolio.000webhostapp.com/" className=' text-[#49e3f5] font-semibold'>AshanKavi</a>.</span> All rights reserved.
       </p>
       </div>
