@@ -1,7 +1,8 @@
+// src/Components/YouCon.jsx
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const Converter = () => {
+const YouCon = () => {
   const [videoLink, setVideoLink] = useState('');
   const [videoDetails, setVideoDetails] = useState(null);
   const [quality, setQuality] = useState('mp3');
@@ -56,9 +57,11 @@ const Converter = () => {
 
   return (
     <div className="flex flex-col items-center w-full h-full min-h-screen py-20 text-white bg-black">
+
       <h1 className="px-8 pb-8 mb-4 text-5xl font-bold text-center uppercase">
         <span className='text-[#ff0000] hover:text-[#ff0000b9]'>YouTube</span> Video Downloader
       </h1>
+
       <div className="flex justify-center w-full px-8 py-8 mb-4">
         <div className="w-[800px]">
           <input
@@ -122,4 +125,4 @@ const Converter = () => {
   );
 };
 
-export default Converter;
+export default YouCon;
